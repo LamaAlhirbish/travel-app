@@ -1,0 +1,44 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+#outputData {
+    text-align: center;
+    width: 50%;
+}
+
+#outputImg {
+    img {
+        width: 100%;
+    }
+}
+
+#outputCity, #outputWeather {
+    color: #8c6c6e;
+    font-weight: 800;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.weatherList {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+/* On screens that are 992px wide or less */
+@media only screen and (max-width: 992px) {
+    #outputData {
+        width:100%;
+    }
+    
+    .card {
+        flex-direction: column-reverse;
+    }
+}

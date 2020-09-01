@@ -1,0 +1,25 @@
+#logoImg {
+    margin: 20px;
+    max-width: 15vw;
+}
+
+#wallpaper {
+    background-image: url("../media/wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: grey;
+    width: 1fr;
+    height: 50vh;
+}
+
+/* On screens that are 992px wide or less */
+@media only screen and (max-width: 992px) {
+    #logoImg {
+        max-width: 25vw;
+    }
+
+    #wallpaper {
+        max-height: 30vh;
+    }
+}

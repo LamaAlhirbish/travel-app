@@ -1,0 +1,24 @@
+$primeryColor: #282828;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: whitesmoke;
+    color: $primeryColor;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 15pt;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* On screens that are 992px wide or less */
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 13pt;
+    }
+}

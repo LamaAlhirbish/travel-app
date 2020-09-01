@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header section: contain wallpaper with logo -->
+      <header>
+        <div id="wallpaper">
+        </div>
+      </header>
+      
+      
+      <!-- Input section: allow user to input city name and departure & return date -->
+      <div class="input">
+        <label class="headline">Where are you going?</label>
+
+        <form class="form" onsubmit="return Client.submission(event)">
+          <div>
+            <input type="text" id="cityName" placeholder="City Name">
+          </div>
+        
+          <div>
+            <input type="date" id="departureDate">
+          </div>
+
+          <div>
+            <input type="date" id="retrunDate">
+          </div>
+
+          <div>
+            <button id="submit" type ="submit" onclick="return Client.submission(event)" onsubmit="return Client.submission(event)"> Search </button>
+          </div>
+          </form>
+
+          <p id="warning"></p>
+      </div>
+
+      <!-- Output section: allow user to input city name and departure & return date -->
+      <ul class="tripList">
+      </ul>
+    </div>
+
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+    </script>
+  </body>
+</html>
